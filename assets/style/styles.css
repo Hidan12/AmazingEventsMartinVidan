@@ -1,0 +1,37 @@
+
+header{
+    min-height: 15vh;
+}
+main{
+    min-height: 75vh;
+}
+footer{
+    min-height: 10vh;
+}
+
+.color-pink{
+    color: rgb(255, 0, 255);
+}
+
+.logo{
+    width: 100%;
+}
+
+footer .social img{
+    width: 7vw;
+}
+.slide-heigth{
+    height: 20vh;
+}
+.card-slid-heigth{
+height: 18vh;
+}
+.heigth-img{
+    height: 50vh;
+}
+.body-card-heigth{
+    height: 35vh;
+}
+.card-width{
+    max-width: 540px;
+}
