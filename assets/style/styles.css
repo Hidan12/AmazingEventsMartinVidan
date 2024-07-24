@@ -1,6 +1,5 @@
-
 header{
-    min-height: 15vh;
+    min-height: 10vh;
 }
 main{
     min-height: 75vh;
@@ -30,7 +29,7 @@ height: 18vh;
     height: 50vh;
 }
 .body-card-heigth{
-    height: 35vh;
+    height: 200px;
 }
 .card-width{
     max-width: 540px;
