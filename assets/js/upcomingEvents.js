@@ -229,15 +229,17 @@ function addInfo(info){
         }
         if(!category.includes(datosArray[i].category)){
             category.push(datosArray[i].category)
-            categoryHtml.innerHTML += `<label class="col-6 col-sm-5 col-md-3 col-lg-2"><input type="checkbox" name=${category[(category.length-1)].trim()} value=${category[(category.length-1)]}>${category[(category.length-1)]}</label>`
+            categoryHtml.innerHTML += `
+                    <input class="btn-check" type="checkbox" id=${category[(category.length-1)].trim()} name=${category[(category.length-1)].trim()} value=${category[(category.length-1)]}>
+                    <label class="btn border border-info" for=${category[(category.length-1)].trim()}> ${category[(category.length-1)]}</label>
+                    `
         } 
     }
 
 }
 
 function main(data) {
-
-    addInfo(data)   
+  addInfo(data)   
 }
 
 main(data)

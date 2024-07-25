@@ -225,7 +225,10 @@ function main(data) {
     createCards(selecClass, data.events[pos])
     if(!category.includes(data.events[pos].category)){
       category.push(data.events[pos].category)
-      categoryHtml.innerHTML += `<label class="col-6 col-sm-5 col-md-3 col-lg-2"><input type="checkbox" name=${category[(category.length-1)].trim()} value=${category[(category.length-1)]}> ${category[(category.length-1)]}</label>`
+      categoryHtml.innerHTML += `
+      <input class="btn-check" type="checkbox" id=${category[(category.length-1)].trim()} name=${category[(category.length-1)].trim()} value=${category[(category.length-1)]}>
+      <label class="btn border border-info" for=${category[(category.length-1)].trim()}> ${category[(category.length-1)]}</label>
+      `
   } 
   }
 }
