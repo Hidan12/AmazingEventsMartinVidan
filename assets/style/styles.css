@@ -2,7 +2,7 @@ header{
     min-height: 10vh;
 }
 main{
-    min-height: 75vh;
+    min-height: 77.5vh;
 }
 footer{
     min-height: 10vh;
@@ -15,9 +15,9 @@ footer{
 .logo{
     width: 100%;
 }
+.hover-custom:hover{
+    border-color: #0d6efd !important;
 
-footer .social img{
-    width: 7vw;
 }
 .slide-heigth{
     height: 20vh;
