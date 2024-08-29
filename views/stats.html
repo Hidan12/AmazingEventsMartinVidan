@@ -50,19 +50,30 @@
       <table class="table table-bordered">
         <thead>
           <tr class="table-secondary">
-            <th colspan="3" scope="col">Events statics </th>
+            <th colspan="3" scope="col" class="text-center">Events statics </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Events with highest % of assistance</td>
-            <td>Events with lowest % of assistance</td>
-            <td>Events with larger capacity</td>
+        <tbody id="tablePercen">
+          <tr class="table-info">
+            <td class="text-center fw-bold">Events with highest % of assistance</td>
+            <td class="text-center fw-bold">Events with lowest % of assistance</td>
+            <td class="text-center fw-bold">Events with larger capacity</td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+          
+        </tbody>
+      </table>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr class="table-secondary">
+            <th colspan="3" scope="col" class="text-center">Upcoming events statistics by category</th>
+          </tr>
+        </thead>
+        <tbody id="tableUp">
+          <tr class="table-info">
+            <td class="text-center fw-bold">Categories</td>
+            <td class="text-center fw-bold">Revenues</td>
+            <td class="text-center fw-bold">Percentage of assitance</td>
           </tr>
         </tbody>
       </table>
@@ -70,49 +81,14 @@
       <table class="table table-bordered">
         <thead>
           <tr class="table-secondary">
-            <th colspan="3" scope="col">Upcoming events statistics by category</th>
+            <th colspan="3" scope="col" class="text-center">Past events statistics by category</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Categories</td>
-            <td>Revenues</td>
-            <td>Percentage of assitance</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <table class="table table-bordered">
-        <thead>
-          <tr class="table-secondary">
-            <th colspan="3" scope="col">Past events statistics by catecory</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Categories</td>
-            <td>Revenues</td>
-            <td>Percentage of assitance</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tbody id="tablePast">
+          <tr class="table-info">
+            <td class="text-center fw-bold">Categories</td>
+            <td class="text-center fw-bold">Revenues</td>
+            <td class="text-center fw-bold">Percentage of assitance</td>
           </tr>
         </tbody>
       </table>
@@ -134,7 +110,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
+  <script type="module" src="../src/js/stats.js"></script>
 
 </body>
 
