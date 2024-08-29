@@ -1,0 +1,35 @@
+0
+: 
+capacity
+: 
+50000
+category
+: 
+"Food"
+date
+: 
+"2023-10-12"
+description
+: 
+"An invitation to enjoy Middle East's flavours."
+estimate
+: 
+50000
+image
+: 
+"https://i.postimg.cc/CxJQqX33/arabic.jpg"
+name
+: 
+"Arabic holidays"
+percentageAssists
+: 
+100
+place
+: 
+"Multi Space"
+price
+: 
+10
+_id
+: 
+7

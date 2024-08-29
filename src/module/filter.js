@@ -18,7 +18,7 @@ export const filters = (arrayChecks, inputSearch, html, data, pag) => {
             }
         })
         if (!bandFind) {
-            html.innerHTML = "<p>No element was found with the filter applied</p>"
+            html.innerHTML = "<p class='fw-bold mt-3'>No element was found with the filter applied</p>"
         }
 
     } else if (arrayChecks.length > 0 && inputSearch == "") {
@@ -30,7 +30,7 @@ export const filters = (arrayChecks, inputSearch, html, data, pag) => {
             }
         })
         if (!bandFind) {
-            html.innerHTML = "<p>No element was found with the filter applied</p>"
+            html.innerHTML = "<p class='fw-bold mt-3'>No element was found with the filter applied</p>"
         }
     } else {
 
@@ -41,7 +41,7 @@ export const filters = (arrayChecks, inputSearch, html, data, pag) => {
             }
         })
         if (!bandFind) {
-            html.innerHTML = "<p>No element was found with the filter applied</p>"
+            html.innerHTML = "<p class='fw-bold mt-3'>No element was found with the filter applied</p>"
         }
 
     }
@@ -54,24 +54,53 @@ export const showCardCategory = (data, checksFilter, pag) => {
     const categoryHtml = document.getElementById("category")
     const inputSearch = document.getElementById("search")
     const buttonSearch = document.getElementById("searchButton")
-  
+    
     data.events.forEach(events => {
-      show.showCard(selecClass, events, pag)
-      if (!category.includes(events.category)) {
-        category.push(events.category)
-        show.showCategory(events.category, categoryHtml, category.length, checksFilter, selecClass, data, pag)
-      }
+        show.showCard(selecClass, events, pag)
+        if (!category.includes(events.category)) {
+            category.push(events.category)
+            show.showCategory(events.category, categoryHtml, category.length, checksFilter, selecClass, data, pag)
+        }
     });
-  
+
     inputSearch.addEventListener("keyup", () => {
-      let conten = inputSearch.value.trim()
-      if (conten != "") {
-        filters(checksFilter, conten.toLocaleLowerCase(), selecClass, data, pag)
-      } else {
-        filters(checksFilter, "", selecClass, data, pag)
-      }
+        let conten = inputSearch.value.trim()
+        if (conten != "") {
+            filters(checksFilter, conten.toLocaleLowerCase(), selecClass, data, pag)
+        } else {
+            filters(checksFilter, "", selecClass, data, pag)
+        }
     })
     buttonSearch.addEventListener("click", () => {
-      filters(checksFilter, inputSearch.value.trim().toLocaleLowerCase(), selecClass, pag)
+        filters(checksFilter, inputSearch.value.trim().toLocaleLowerCase(), selecClass, pag)
     })
-  }
+}
+
+
+export function filterApi(time = "", info) {
+    let temp = []
+    if (info.currentDate) {
+        switch (time) {
+            case "past":
+                info.events.forEach(even => {
+                    if (even.date < info.currentDate) {
+                        temp.push(even)
+                    }
+                });
+                break;
+            case "upComing":
+                info.events.forEach(even => {
+                    if (even.date > info.currentDate) {
+                        temp.push(even)
+                    }
+                });
+                break;
+
+            default:
+                temp = info
+                break;
+        }
+        return temp
+    }
+    return { error: "error al hacer fetch" }
+}

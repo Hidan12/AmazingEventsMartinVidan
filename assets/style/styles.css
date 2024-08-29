@@ -8,8 +8,9 @@ footer{
     min-height: 10vh;
 }
 
-.color-pink{
-    color: rgb(255, 0, 255);
+.color-white{
+    color: white;
+    text-shadow: 1px 1px 6px rgba(0,0,0,1);
 }
 
 .logo{
@@ -20,17 +21,20 @@ footer{
 
 }
 .slide-heigth{
-    height: 20vh;
+    height: 25vh;
 }
 .card-slid-heigth{
-    height: 18vh;
+    height: 22vh;
 }
 .heigth-img{
-    height: 20vh;
+    height: 30vh;
 }
 .body-card-heigth{
     height: 200px;
 }
 .card-width{
     max-width: 540px;
+}
+.img-detail{
+    height: 170px;
 }
