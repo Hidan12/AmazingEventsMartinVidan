@@ -11,6 +11,8 @@ function filterCategory(info, propInfo){
             infoCategory.push({
                 category: event.category,
                 revenue: (event.price * event[propInfo]),
+                capacity: event. capacity,
+                assistance: event.assistance || event.estimate,
                 percentage: event.percentageAssists
             }) 
 
@@ -18,7 +20,9 @@ function filterCategory(info, propInfo){
         }else{
             let tmp = infoCategory.find(inf => inf. category == event.category)
             tmp.revenue +=  (event.price * event[propInfo])
-            tmp.percentage = (event.percentageAssists + tmp.percentage) / 2
+            tmp.assistance += event.assistance || event.estimate
+            tmp.capacity += event.capacity
+            tmp.percentage = (tmp.assistance / tmp.capacity) * 100
         }
         
     })
