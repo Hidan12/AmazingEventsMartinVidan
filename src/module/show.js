@@ -7,13 +7,13 @@ const selecCheck = (labelHTML) => {
 
 const unselectCheck = (labelHTML) => {
     labelHTML.classList.remove("border-primary");
-    labelHTML.classList.add("border-warning");
+    labelHTML.classList.add("border-bt");
 }
 
 export default {
     showCard: (idHtml, objet, pag) => {
         idHtml.innerHTML += `
-            <div class="card col-sm-8 col-md-5 col-xl-3">
+            <div class="card col-11 col-sm-8 col-md-5 col-xl-3">
                 <img src=${objet.image} class="card-img-top object-fit-cover p-2 heigth-img" alt="...">
                 <div class="card-body body-card-heigth d-flex flex-column justify-content-between">
                   <div>
@@ -21,7 +21,7 @@ export default {
                     <p class="card-text">${objet.description}</p>
                   </div>
                   <div class="d-flex flex-row justify-content-between align-items-center">
-                        <p class="card-text m-0">Price: ${objet.price}</p>
+                        <p class="card-text m-0">Price: $${objet.price}</p>
                         <a href="${pag == "home" ? "./views/details.html" : "./details.html"}?id=${objet._id}" class="btn btn-primary">Details</a>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default {
                                         <li class="list-group-item text-center d-flex justify-content-between">
                                         ${event.estimate ? `<p class="card-text col-5 text-start"><small class="text-body-secondary">Estimate: ${event.estimate}</small></p>` : ""}
                                         ${event.assistance ? `<p class="card-text col-5 text-start"><small class="text-body-secondary">Assistance: ${event.assistance}</small></p>` : ""}
-                                        <p class="card-text text-start col-5">Price: ${event.price} USD</p>
+                                        <p class="card-text text-start col-5">Price: $${event.price}</p>
                                     </li>
                                 </ul>
                                     

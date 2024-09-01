@@ -7,10 +7,15 @@ main{
 footer{
     min-height: 10vh;
 }
-
+.border-bt{
+    border-color: #a60e40 !important;
+}
+.bg-body{
+    background-color: #f4f7f7 !important;
+}
 .color-white{
-    color: white;
-    text-shadow: 1px 1px 6px rgba(0,0,0,1);
+    color: #fff;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.93);
 }
 
 .logo{
@@ -21,10 +26,10 @@ footer{
 
 }
 .slide-heigth{
-    height: 25vh;
+    height: 29vh;
 }
 .card-slid-heigth{
-    height: 22vh;
+    height: 28vh;
 }
 .heigth-img{
     height: 30vh;

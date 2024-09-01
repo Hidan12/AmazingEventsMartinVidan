@@ -28,14 +28,12 @@ function filterCategory(info, propInfo){
 
 function showStastCategory (idHtml, info){
     info.forEach(event =>{
-        idHtml.innerHTML +=`
+        idHtml.innerHTML += `
                             <tr>
                                 <td class="text-center fw-medium">${event.category}</td>
-                                <td class="text-center">${event.revenue} usd</td>
+                                <td class="text-center">$${event.revenue}</td>
                                 <td class="text-center">${(Math.floor(event.percentage * 10) / 10).toFixed(1)} (%)</td>
                             </tr>
-        
-        
         `
     })
 }
@@ -43,8 +41,8 @@ function showStastCategory (idHtml, info){
 function showPercent (idHtml, highAttendance, lowAttendance, cap){
     idHtml.innerHTML += `
                                 <tr>
-                                    <td class="text-center">${highAttendance.name} (${highAttendance.percentageAssists}%)</td>
-                                    <td class="text-center">${lowAttendance.name} (${lowAttendance.percentageAssists}%)</td>
+                                    <td class="text-center">${highAttendance.name} (${(Math.floor(highAttendance.percentageAssists * 10) / 10).toFixed(1)}%)</td>
+                                    <td class="text-center">${lowAttendance.name} (${(Math.floor(lowAttendance.percentageAssists * 10) / 10).toFixed(1)}%)</td>
                                     <td class="text-center">${cap.name} (${cap.capacity})</td>
                                 </tr>
             `
